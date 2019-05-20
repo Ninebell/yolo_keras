@@ -26,7 +26,7 @@ comand input: --img, --label
     ![Alt text](./explain_image/image_input.PNG)  
 >>difference in setting label path and image path is label path will be file path but image path be directory path.
 
-####Now , you can use data maker!
+#### Now , you can use data maker!
 >mouse left click for draw bounding box  
 keyboard button  
 n(next image)  
