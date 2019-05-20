@@ -1,7 +1,8 @@
 import os
-import  glob
+import glob
 import cv2
 import numpy as np
+import argparse
 
 MAIN_WINDOW_NAME = "data_maker"
 
@@ -12,6 +13,21 @@ label_path = "./dataset/label.txt"
 img_path = "./dataset/image"
 
 y_gap = 60
+
+parser = argparse.ArgumentParser()
+
+
+def init_parser():
+    parser.add_argument('--img', default="./dataset/image")
+    parser.add_argument('--label', default="./dataset/label.txt")
+
+
+def get_parser():
+    args = parser.parse_args()
+    global label_path
+    global img_path
+    label_path = args.label
+    img_path = args.img
 
 
 class SaveInfo:
@@ -264,7 +280,12 @@ def read_image(img_name):
 
 def load_exist_labeling(img_name):
     labels = []
-    f = open(img_path+"/"+img_name+".txt", "r")
+    read_label_path = os.path.join(img_path, img_name+".txt")
+
+    if not os.path.exists(read_label_path):
+        return []
+    f = open(read_label_path, "r")
+
     bounding_list = []
     while True:
         line = f.readline()
@@ -278,6 +299,9 @@ def load_exist_labeling(img_name):
 
 
 if __name__ == "__main__":
+
+    init_parser()
+    get_parser()
 
     label_list = read_label_info(label_path)
     BoundingBoxFactory.set_label_list(label_list)
