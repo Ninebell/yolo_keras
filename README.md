@@ -3,6 +3,13 @@
 Make yolo model with keras
 
 
+### Yolo
+My main focus in this repository is making cost function for yolo and changing label data to yolo dataset appropriately
+
+
+---
+
+
 ### Data_maker
 It help you to make yolo data like (x, y, w, h, label_idx)\
 requirement: cv2, numpy
