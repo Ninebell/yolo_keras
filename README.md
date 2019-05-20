@@ -40,4 +40,12 @@ s(save labeling info)
 When you save labeling info, it will be saved in image path  
 ![Alt text](./explain_image/label_making.PNG)  
 
+### Sample images
+![Alt text](./explain_image/sample1.PNG)  
+![Alt text](./explain_image/sample2.PNG)  
+
+
+### To-Do
+> Need to change color to same with bounding box and label.
+
 ---
