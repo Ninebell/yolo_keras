@@ -29,7 +29,7 @@ comand input: --img, --label
 #### Now , you can use data maker!
 >mouse left click for draw bounding box  
 keyboard button  
-n(next image)  
+>>n(next image)  
 p(prev image)  
 u(up label)  
 d(down label)  
